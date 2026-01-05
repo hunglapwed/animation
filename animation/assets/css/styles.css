@@ -123,3 +123,150 @@ body {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+/* =========================
+   LAB 2 – CSS KEYFRAMES
+========================= */
+
+/* ===== BÀI 1: TEXT CHẠY NGANG ===== */
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+.marquee p {
+    display: inline-block;
+    animation: moveText 10s linear infinite;
+}
+
+@keyframes moveText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* ===== BÀI 2: HỘP XOAY VÒNG ===== */
+.rotate-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.rotate-box {
+    width: 100px;
+    height: 100px;
+    background-color: #1e90ff;
+    animation: rotateBox 3s linear infinite;
+}
+
+@keyframes rotateBox {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===== BÀI 3: FADE-IN SEQUENCE ===== */
+.fade-gallery {
+    display: flex;
+    gap: 20px;
+}
+
+.fade-gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.fade-gallery img:nth-child(1) {
+    animation-delay: 0s;
+}
+.fade-gallery img:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.fade-gallery img:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ===== BÀI 4: NÚT NHẤP NHÁY ===== */
+.cta {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background: red;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        background: red;
+        transform: scale(1);
+    }
+    50% {
+        background: orange;
+        transform: scale(1.05);
+    }
+    100% {
+        background: red;
+        transform: scale(1);
+    }
+}
+
+/* ===== BÀI 5: SLIDER CSS ===== */
+.slider {
+    width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    animation: slide 15s infinite;
+}
+
+.slides img {
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0%   { transform: translateX(0); }
+    33%  { transform: translateX(-100%); }
+    66%  { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #1e90ff;
+    animation: rotateBox 3s linear infinite;
+}
+
+@keyframes rotateBox {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+
+
+
