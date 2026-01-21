@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="header">
+  <h2>Đăng ký trải nghiệm</h2>
+</header>
+
+<main class="contact">
+  <form id="contactForm">
+
+    <div class="field">
+      <input type="text" id="name" required>
+      <label>Họ tên</label>
+    </div>
+
+    <div class="field">
+      <input type="email" id="email" required>
+      <label>Email</label>
+      <small id="emailError"></small>
+    </div>
+
+    <button type="submit" id="submitBtn">Gửi đăng ký</button>
+  </form>
+</main>
+
+<div id="toast">Gửi thành công!</div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
