@@ -82,9 +82,6 @@ Chức năng gồm:
 - `assets/js/app.js`
 - `assets/css/styles.css`
 
----
-
- Link demo
-GitHub Pages: (dán link vào đây)
 
 ---
+
